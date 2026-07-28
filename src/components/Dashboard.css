@@ -1,0 +1,14 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.dashboard-label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6B7280;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}

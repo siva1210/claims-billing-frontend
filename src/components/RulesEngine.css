@@ -1,0 +1,53 @@
+.rules-engine {
+  padding: 16px;
+}
+
+.rules-subtitle {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.rule-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.rule-form input,
+.rule-form select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-rule-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-rule-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rules-table th,
+.rules-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.rules-table .empty-state {
+  text-align: center;
+  color: #888;
+}

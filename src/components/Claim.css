@@ -1,0 +1,63 @@
+.card {
+  /* Set a default variable for the accent border */
+  --status-color: #9CA3AF; 
+  
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-left: 4px solid var(--status-color);
+  border-radius: 12px; /* Slightly softer corners */
+  padding: 20px 24px; /* More breathing room */
+  margin: 16px 0;
+  
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't break max-width on mobile */
+  
+  /* Modern system font stack */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Slightly deeper, more modern layered shadow */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  
+  /* Smooth transition for interactivity */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle hover effect to make the card feel interactive */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 14px; /* Bumped slightly for readability */
+  color: #4B5563; /* Softer text color for standard data */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* Keeps text aligned if right-side values wrap to a new line */
+  gap: 16px; /* Prevents long labels and values from colliding */
+}
+
+/* Treat the first paragraph like a proper header */
+.card p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827; /* Darker color for high contrast heading */
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F3F4F6; /* Creates a clean visual separation */
+}
+
+.card hr {
+  display: none;
+}
+
+/* Simply update the variable for status modifiers */
+.card.eligible {
+  --status-color: #10B981; /* Modern emerald green */
+}
+
+.card.not-eligible {
+  --status-color: #EF4444; /* Modern vibrant red */
+}

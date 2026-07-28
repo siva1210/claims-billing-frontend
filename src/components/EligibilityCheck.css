@@ -1,0 +1,26 @@
+.eligibility-btn {
+  background: #1C2333;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  cursor: pointer;
+  margin: 20px;
+  transition: background 0.15s ease;
+}
+
+.eligibility-btn:hover {
+  background: #2E3648;
+}
+
+.eligibility-btn:active {
+  transform: translateY(1px);
+}
+.eligibility-error {
+  color: #b91c1c;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}

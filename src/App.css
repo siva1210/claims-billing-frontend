@@ -1,0 +1,256 @@
+/* ===========================
+   Global
+=========================== */
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+
+  --border: #e5e7eb;
+  --text: #111827;
+  --text-secondary: #6b7280;
+
+  --radius: 12px;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
+  --shadow-md: 0 8px 24px rgba(15,23,42,.08);
+
+  --transition: all .25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+
+/* ===========================
+   App Container
+=========================== */
+
+.app {
+  max-width: 1450px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+
+/* ===========================
+   Pipeline
+=========================== */
+
+.pipeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+
+  background: var(--surface);
+
+  padding: 28px 36px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+}
+
+.pipeline:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.pipeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  transition: var(--transition);
+}
+
+.pipeline-step:hover {
+  transform: translateY(-3px);
+}
+
+.step-label {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  color: var(--text-secondary);
+}
+
+
+/* ===========================
+   Tabs
+=========================== */
+
+.app-tabs {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 32px 0 22px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  position: relative;
+
+  padding: 10px 18px;
+
+  background: transparent;
+  border: none;
+
+  border-radius: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: .95rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.tab:hover {
+  background: #eef4ff;
+  color: var(--primary);
+}
+
+.tab.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+  right: 12px;
+  bottom: -15px;
+
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: var(--primary);
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.clear-all-btn,
+.logout-btn {
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-size: .92rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+
+/* Clear Button */
+
+.clear-all-btn {
+  margin-left: auto;
+
+  background: var(--danger);
+
+  color: white;
+
+  border: none;
+
+  box-shadow: 0 3px 8px rgba(220,38,38,.18);
+}
+
+.clear-all-btn:hover {
+  background: var(--danger-hover);
+  transform: translateY(-1px);
+}
+
+.clear-all-btn:active {
+  transform: scale(.98);
+}
+
+
+/* Logout */
+
+.logout-btn {
+  margin-left: 10px;
+
+  background: white;
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+}
+
+.logout-btn:hover {
+  background: #f8fafc;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.logout-btn:active {
+  transform: scale(.98);
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 900px) {
+
+  .pipeline {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .app-tabs {
+    flex-wrap: wrap;
+  }
+
+  .clear-all-btn {
+    margin-left: 0;
+  }
+}
